@@ -1,10 +1,10 @@
 import typer
+from labtasker_plugin_task_recency.impl import By, get_kth_recent_tasks
 
 from labtasker.client.cli.task import app
 from labtasker.client.core.cli_utils import cli_utils_decorator
 from labtasker.client.core.logging import stdout_console
 from labtasker.utils import parse_time_interval
-from labtasker_plugin_task_recency.impl import By, get_kth_recent_tasks
 
 
 def validate_order(order: str):
