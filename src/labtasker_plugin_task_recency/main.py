@@ -36,7 +36,9 @@ def recent(
         "Accepts 'asc' or 'desc'. Defaults to 'desc'. desc: recent; asc: least recent.",
     ),
 ):
-    """"""
+    """
+    Get tasks from the k-th most recent time chunk, where chunks are formed by grouping tasks with time differences less than the specified interval.
+    """
     interval = parse_time_interval(interval)
     tasks = get_kth_recent_tasks(by, order, k, interval)
 
