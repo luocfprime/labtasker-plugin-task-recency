@@ -3,16 +3,11 @@ import time
 from contextlib import suppress
 
 import pytest
-from labtasker_plugin_task_recency.main import By, get_kth_recent_tasks
+from labtasker import (LabtaskerNetworkError, create_queue, delete_queue,
+                       get_client_config, submit_task)
 from typer.testing import CliRunner
 
-from labtasker import (
-    LabtaskerNetworkError,
-    create_queue,
-    delete_queue,
-    get_client_config,
-    submit_task,
-)
+from labtasker_plugin_task_recency.main import By, get_kth_recent_tasks
 
 runner = CliRunner()
 
